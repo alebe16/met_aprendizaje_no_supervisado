@@ -6,7 +6,6 @@ import seaborn as sns
 from sklearn.decomposition import PCA
 import os
 
-# Crear carpetas necesarias si no existen
 os.makedirs('resultados', exist_ok=True)
 
 # 1. Cargar datos
@@ -36,7 +35,6 @@ try:
     
     # Seleccionar features para clustering
     required_columns = ['distancia_km', 'transbordos', 'hora_minutos']
-    # Añadir las columnas de demanda que existan
     for col in ['demanda_alta', 'demanda_media', 'demanda_baja']:
         if col in data.columns:
             required_columns.append(col)
@@ -75,7 +73,6 @@ kmeans = KMeans(n_clusters=3, random_state=42)
 clusters = kmeans.fit_predict(X_scaled)
 data['cluster'] = clusters
 
-# Guardar resultados
 data.to_csv('resultados/rutas_clusters.csv', index=False)
 print("Resultados de clustering guardados.")
 
