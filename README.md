@@ -30,7 +30,7 @@ Dataset sintético simulado: rutas_sitp_ml.csv
 
 Se convierte la columna hora_dia en hora_minutos
 
-Se aplica one-hot encoding a demanda ✓
+Se aplica one-hot encoding a demanda 
 
 Se estandarizan variables numéricas con StandardScaler
 
