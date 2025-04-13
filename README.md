@@ -50,41 +50,41 @@ Permite descubrir patrones no evidentes
 
 **Variables Seleccionadas para Clustering:**
 
-distancia_km
+- distancia_km
 
-transbordos
+- transbordos
 
-hora_minutos
+- hora_minutos
 
-demanda_alta, demanda_media, demanda_baja (one-hot)
+- demanda_alta, demanda_media, demanda_baja (one-hot)
 
 **Implementación:**
 
-Se explora el número óptimo de clusters usando el Método del Codo
+- Se explora el número óptimo de clusters usando el Método del Codo
 
-Se elige k=3 como valor óptimo
+- Se elige k=3 como valor óptimo
 
-Se entrena un modelo KMeans con 3 clusters
+- Se entrena un modelo KMeans con 3 clusters
 
-Se visualizan los resultados con PCA en 2 dimensiones
+- Se visualizan los resultados con PCA en 2 dimensiones
 
 **Resultados Generados:**
 
-resultados/rutas_clusters.csv: archivo con cada ruta y su cluster asignado
+1. resultados/rutas_clusters.csv: archivo con cada ruta y su cluster asignado
 
-resultados/elbow_method.png: gráfico del método del codo
+2. resultados/elbow_method.png: gráfico del método del codo
 
-resultados/clusters_pca.png: visualización PCA de los clusters
+3. resultados/clusters_pca.png: visualización PCA de los clusters
 
 **Principales Hallazgos**
 
-Se identificaron 3 grupos naturales de rutas con comportamientos distintos.
+- Se identificaron 3 grupos naturales de rutas con comportamientos distintos.
 
-La distancia y la hora del día son las variables más influyentes.
+- La distancia y la hora del día son las variables más influyentes.
 
-Las rutas en hora pico tienden a formar clusters consistentes.
+- Las rutas en hora pico tienden a formar clusters consistentes.
 
-El modelo permite detectar patrones sin necesidad de variables objetivo.
+- El modelo permite detectar patrones sin necesidad de variables objetivo.
 
 **Aplicaciones Prácticas**
 
